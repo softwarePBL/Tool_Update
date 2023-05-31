@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bulletin.css">
+    <script src="https://kit.fontawesome.com/fad56724bb.js" crossorigin="anonymous"></script>
+
+    <script src="../js/bulletin_checkbox.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <!--로고-->
+            <img src="../img/logo_2.jpg" class="logo_img">
+        </div>
+        <span class="title">
+            Cafe인
+        </span>
+        
+        <span class="nav1">
+            <ul>
+                <li><a href="coffee.html" style="font-size: 2.2vw;">Shop</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </span>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown_btn" id="img_btn"><img src="../img/coffeebean.png"></button>
+            <div class="dropdown_submenu">
+                <div class="submenu_title">
+                    <b>My CafeIn</b>
+                    <a></a>
+                </div>
+                <div class="submenu_shopping">
+                    <a href="#">장바구니</a>
+                </div>
+                <div class="submenu_interest">
+                    <a href="#"><b>관심 상품</b></a>
+                    <a href="#">찜한 상품</a>
+                    <a href="#">최근 본 상품</a>
+                </div>
+                <b href="#">주문 목록</b>
+                <div class="submenu_review">
+                    <a href="#"><b>리뷰 관리</b></a>
+                    <a href="#">작성 가능한 리뷰</a>
+                    <a href="#">내가 작성한 리뷰</a>
+                </div>
+                <a href="#"><b>쿠폰 관리</b></a>
+                <a href="#"><b>계정 관리</b></a>
+            </div>
+        </div>
+        <div class="guest">
+            guest1 님
+        </div>
+    </div>
+    
+    <div class = "shop_page">
+        <div class="nav2">
+            <ul>
+                <li><a href="coffee.html">원두</a></li>
+                <li><a href="tool.html">도구</a></li>
+                <li><a href="new_product.html">신상</a></li>
+                <li><a href="sale.html">세일</a></li>
+                <li><a href="event.html">기획전</a></li>
+            </ul>
+        </div>
+
+        <div class="search">
+            <input name="searching" type="search" class="input" placeholder="검색어를 입력하세요">
+            <button type="button" class="search_button" id="search_button" style='cursor:pointer'>
+                <i class="fa-solid fa-magnifying-glass fa-3x"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="bulletin">
+        <span class="b_title">도구 게시글 작성</span>
+        <br>
+        <br>
+        <form action="submit_post.php" method="post">
+            <label for="title">제목 :</label>
+            <input type="text1" id="b_title" name="title" required><br><br>
+            
+            <div class="category">
+                <label for="tags">카테고리 :</label>
+
+                <input type="radio" id="show1" name="tags[]" value="category_태그1" onchange="toggleVisibility('show1')">
+                <label for="show1">커피머신</label>
+                <input type="radio" id="show2" name="tags[]" value="category_태그2" onchange="toggleVisibility('show2')">
+                <label for="show2">그라인더</label>
+                <input type="radio" id="show3" name="tags[]" value="category_태그3" onchange="toggleVisibility('show3')">
+                <label for="show3">액세서리</label>
+                <input type="radio" id="show4" name="tags[]" value="category_태그4" onchange="toggleVisibility('show4')">
+                <label for="show4">드립커피</label>
+            </div>
+            <br>
+
+            <div id="hiddenDiv1" class="hiddenDiv" style="display: none;">
+                <div class="coffee_machine">
+                    <label for="tags">커피머신 :</label>
+    
+                    <input type="checkbox" id="coffee_machine_tag1" name="tags[]" value="coffee_machine_태그1">
+                    <label for="coffee_machine_tag1">에스프레소 머신</label>
+                    <input type="checkbox" id="coffee_machine_tag2" name="tags[]" value="coffee_machine_태그2">
+                    <label for="coffee_machine_tag2">캡슐 커피머신</label>
+                </div>
+                <br>
+    
+                <div class="use">
+                    <label for="tags">용도 :</label>
+    
+                    <input type="checkbox" id="use_tag1" name="tags[]" value="use_태그1">
+                    <label for="use_tag1">가정용</label>
+                    <input type="checkbox" id="use_tag2" name="tags[]" value="use_태그2">
+                    <label for="use_tag2">업소용</label>
+                </div>
+                <br>
+    
+                <div class="price">
+                    <label for="tags">가격 :</label>
+                    <input type="text2" id="b_title" name="title" required><br>
+                </div>
+                <br>
+                
+                <div class="op_method">
+                    <label for="tags">조작방식 :</label>
+    
+                    <input type="checkbox" id="op_method_tag1" name="tags[]" value="op_method_태그1">
+                    <label for="op_method_tag1">전자동</label>
+                    <input type="checkbox" id="op_method_tag2" name="tags[]" value="op_method_태그2">
+                    <label for="op_method_tag2">반자동</label>
+                    <input type="checkbox" id="op_method_tag3" name="tags[]" value="op_method_태그3">
+                    <label for="op_method_tag3">수동식</label>
+                    <input type="checkbox" id="op_method_tag4" name="tags[]" value="op_method_태그4">
+                    <label for="op_method_tag4">전동식</label>
+                </div>
+                <br>
+    
+                <div class="brand">
+                    <label for="tags">브랜드 :</label>
+    
+                    <input type="checkbox" id="brand_tag1" name="tags[]" value="brand_태그1">
+                    <label for="brand_tag1">네스프레소</label>
+                    <input type="checkbox" id="brand_tag2" name="tags[]" value="brand_태그2">
+                    <label for="brand_tag2">필립스</label>
+                    <input type="checkbox" id="brand_tag3" name="tags[]" value="brand_태그3">
+                    <label for="brand_tag3">드롱기</label>
+                    <input type="checkbox" id="brand_tag4" name="tags[]" value="brand_태그4">
+                    <label for="brand_tag4">플랜잇</label>
+                    <input type="checkbox" id="brand_tag5" name="tags[]" value="brand_태그5">
+                    <label for="brand_tag5">브레빌</label><br>
+                    <input type="checkbox" id="brand_tag6" name="tags[]" value="brand_태그6">
+                    <label for="brand_tag6">테팔</label>
+                    <input type="checkbox" id="brand_tag7" name="tags[]" value="brand_태그7">
+                    <label for="brand_tag7">밀리타</label>
+                    <input type="checkbox" id="brand_tag8" name="tags[]" value="brand_태그8">
+                    <label for="brand_tag8">유라</label>
+                    <input type="checkbox" id="brand_tag9" name="tags[]" value="brand_태그9">
+                    <label for="brand_tag9">가찌아</label>
+                    <input type="checkbox" id="brand_tag10" name="tags[]" value="brand_태그10">
+                    <label for="brand_tag10">EL ROCIO</label>
+                </div>
+                <br>
+            </div>
+
+            <div id="hiddenDiv2" class="hiddenDiv" style="display: none;">
+                <div class="grinder">
+                    <label for="tags">그라인더 :</label>
+    
+                    <input type="checkbox" id="grinder_tag1" name="tags[]" value="grinder_태그1">
+                    <label for="grinder_tag1">자동</label>
+                    <input type="checkbox" id="grinder_tag2" name="tags[]" value="grinder_태그2">
+                    <label for="grinder_tag2">수동</label>
+                </div>
+                <br>
+    
+                <div class="price">
+                    <label for="tags">가격 :</label>
+                    <input type="text2" id="b_title" name="title" required><br>
+                </div>
+                <br>
+    
+                <div class="brand">
+                    <label for="tags">브랜드 :</label>
+    
+                    <input type="checkbox" id="brand_tag1" name="tags[]" value="brand_태그1">
+                    <label for="brand_tag1">칼리타</label>
+                    <input type="checkbox" id="brand_tag2" name="tags[]" value="brand_태그2">
+                    <label for="brand_tag2">드롱기</label>
+                    <input type="checkbox" id="brand_tag3" name="tags[]" value="brand_태그3">
+                    <label for="brand_tag3">타임모어</label>
+                    <input type="checkbox" id="brand_tag4" name="tags[]" value="brand_태그4">
+                    <label for="brand_tag4">코맥</label>
+                    <input type="checkbox" id="brand_tag5" name="tags[]" value="brand_태그5">
+                    <label for="brand_tag5">스타벅스</label><br>
+                    <input type="checkbox" id="brand_tag6" name="tags[]" value="brand_태그6">
+                    <label for="brand_tag6">하리오</label>
+                    <input type="checkbox" id="brand_tag7" name="tags[]" value="brand_태그7">
+                    <label for="brand_tag7">마리슈타이거</label>
+                    <input type="checkbox" id="brand_tag8" name="tags[]" value="brand_태그8">
+                    <label for="brand_tag8">바라짜</label>
+                    <input type="checkbox" id="brand_tag9" name="tags[]" value="brand_태그9">
+                    <label for="brand_tag9">빈플러스</label>
+                    <input type="checkbox" id="brand_tag10" name="tags[]" value="brand_태그10">
+                    <label for="brand_tag10">칼딘</label>
+                </div>
+                <br>
+            </div>
+            
+            <div id="hiddenDiv3" class="hiddenDiv" style="display: none;">
+                <div class="accessory">
+                    <label for="tags">액세서리 :</label>
+    
+                    <input type="checkbox" id="accessory_tag1" name="tags[]" value="accessory_태그1">
+                    <label for="accessory_tag1">템퍼</label>
+                    <input type="checkbox" id="accessory_tag2" name="tags[]" value="accessory_태그2">
+                    <label for="accessory_tag2">계량스푼</label>
+                    <input type="checkbox" id="accessory_tag3" name="tags[]" value="accessory_태그3">
+                    <label for="accessory_tag3">넛박스</label>
+                    <input type="checkbox" id="accessory_tag4" name="tags[]" value="accessory_태그4">
+                    <label for="accessory_tag4">디스트리뷰터</label>
+                </div>
+                <br>
+    
+                <div class="price">
+                    <label for="tags">가격 :</label>
+                    <input type="text2" id="b_title" name="title" required><br>
+                </div>
+                <br>
+    
+                <div class="brand">
+                    <label for="tags">브랜드 :</label>
+    
+                    <input type="checkbox" id="brand_tag1" name="tags[]" value="brand_태그1">
+                    <label for="brand_tag1">풀만</label>
+                    <input type="checkbox" id="brand_tag2" name="tags[]" value="brand_태그2">
+                    <label for="brand_tag2">CBSC</label>
+                    <input type="checkbox" id="brand_tag3" name="tags[]" value="brand_태그3">
+                    <label for="brand_tag3">카페클럽</label>
+                    <input type="checkbox" id="brand_tag4" name="tags[]" value="brand_태그4">
+                    <label for="brand_tag4">칼딘</label>
+                    <input type="checkbox" id="brand_tag5" name="tags[]" value="brand_태그5">
+                    <label for="brand_tag5">칼리타</label><br>
+                    <input type="checkbox" id="brand_tag6" name="tags[]" value="brand_태그6">
+                    <label for="brand_tag6">이케아</label>
+                    <input type="checkbox" id="brand_tag7" name="tags[]" value="brand_태그7">
+                    <label for="brand_tag7">UNKNOWN</label>
+                    <input type="checkbox" id="brand_tag8" name="tags[]" value="brand_태그8">
+                    <label for="brand_tag8">COVING</label>
+                    <input type="checkbox" id="brand_tag9" name="tags[]" value="brand_태그9">
+                    <label for="brand_tag9">빈프로</label>
+                    <input type="checkbox" id="brand_tag10" name="tags[]" value="brand_태그10">
+                    <label for="brand_tag10">빈플랜트</label>
+                </div>
+                <br>
+            </div>
+            
+            <div id="hiddenDiv4" class="hiddenDiv" style="display: none;">
+                <div class="drip_coffee">
+                    <label for="tags">드립커피 :</label>
+    
+                    <input type="checkbox" id="drip_coffee_tag1" name="tags[]" value="drip_coffee_태그1">
+                    <label for="drip_coffee_tag1">필터</label>
+                    <input type="checkbox" id="drip_coffee_tag2" name="tags[]" value="drip_coffee_태그2">
+                    <label for="drip_coffee_tag2">드립포트</label>
+                    <input type="checkbox" id="drip_coffee_tag3" name="tags[]" value="drip_coffee_태그3">
+                    <label for="drip_coffee_tag3">드립서버</label>
+                    <input type="checkbox" id="drip_coffee_tag4" name="tags[]" value="drip_coffee_태그4">
+                    <label for="drip_coffee_tag4">드립백 필터</label>
+                    <input type="checkbox" id="drip_coffee_tag5" name="tags[]" value="drip_coffee_태그5">
+                    <label for="drip_coffee_tag5">드리퍼</label>
+                </div>
+                <br>
+    
+                <div class="price">
+                    <label for="tags">가격 :</label>
+                    <input type="text2" id="b_title" name="title" required><br>
+                </div>
+                <br>
+    
+                <div class="brand">
+                    <label for="tags">브랜드 :</label>
+    
+                    <input type="checkbox" id="brand_tag1" name="tags[]" value="brand_태그1">
+                    <label for="brand_tag1">하리오</label>
+                    <input type="checkbox" id="brand_tag2" name="tags[]" value="brand_태그2">
+                    <label for="brand_tag2">칼리타</label>
+                    <input type="checkbox" id="brand_tag3" name="tags[]" value="brand_태그3">
+                    <label for="brand_tag3">아돌프</label>
+                    <input type="checkbox" id="brand_tag4" name="tags[]" value="brand_태그4">
+                    <label for="brand_tag4">다카히로</label>
+                    <input type="checkbox" id="brand_tag5" name="tags[]" value="brand_태그5">
+                    <label for="brand_tag5">킨토</label><br>
+                    <input type="checkbox" id="brand_tag6" name="tags[]" value="brand_태그6">
+                    <label for="brand_tag6">빈플러스</label>
+                    <input type="checkbox" id="brand_tag7" name="tags[]" value="brand_태그7">
+                    <label for="brand_tag7">에콜그린</label>
+                    <input type="checkbox" id="brand_tag8" name="tags[]" value="brand_태그8">
+                    <label for="brand_tag8">제임스티스푼</label>
+                    <input type="checkbox" id="brand_tag9" name="tags[]" value="brand_태그9">
+                    <label for="brand_tag9">고노</label>
+                </div>
+                <br>
+            </div>
+
+            <label for="content">내용(파일로 첨부 가능) :</label>
+            <input type="file" name="photo" accept="image/*">
+            <br>
+            <br>
+
+            <input type="submit" value="게시글 작성">
+        </form>
+    </div>
+    
+</body>
+</html>

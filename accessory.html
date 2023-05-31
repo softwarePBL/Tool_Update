@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tool.css">
+    <script src="https://kit.fontawesome.com/fad56724bb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <!--로고-->
+            <img src="../img/logo_2.jpg" class="logo_img">
+        </div>
+        <span class="title">
+            Cafe인
+        </span>
+        
+        <span class="nav1">
+            <ul>
+                <li><a href="coffee.html" style="font-size:2.2vw;">Shop</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </span>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown_btn" id="img_btn"><img src="../img/coffeebean.png"></button>
+            <div class="dropdown_submenu">
+                <div class="submenu_title">
+                    <b>My CafeIn</b>
+                    <a></a>
+                </div>
+                <div class="submenu_shopping">
+                    <a href="#">장바구니</a>
+                </div>
+                <div class="submenu_interest">
+                    <a href="#"><b>관심 상품</b></a>
+                    <a href="#">찜한 상품</a>
+                    <a href="#">최근 본 상품</a>
+                </div>
+                <b href="#">주문 목록</b>
+                <div class="submenu_review">
+                    <a href="#"><b>리뷰 관리</b></a>
+                    <a href="#">작성 가능한 리뷰</a>
+                    <a href="#">내가 작성한 리뷰</a>
+                </div>
+                <a href="#"><b>쿠폰 관리</b></a>
+                <a href="#"><b>계정 관리</b></a>
+            </div>
+        </div>
+        <div class="guest">
+            guest1 님
+        </div>
+    </div>  
+    <div class = "shop_page">
+        <div class="nav2">
+            <ul>
+                <li><a href="coffee.html">원두</a></li>
+                <li><a href="tool.html" style="color: burlywood">도구</a></li>
+                <li><a href="new_product.html">신상</a></li>
+                <li><a href="#">세일</a></li>
+                <li><a href="#">기획전</a></li>
+            </ul>
+        </div>
+
+        <div class="search">
+            <input name="searching" type="search" class="input" placeholder="검색어를 입력하세요">
+            <button type="button" class="search_button" id="search_button" style='cursor:pointer'>
+                <i class="fa-solid fa-magnifying-glass fa-3x"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="body_content">
+        <div>
+            <div class="tool_content">
+                액세서리
+            </div>
+            <div class="tool_checkbox">
+                <input type="checkbox" id="accessory_label1" value="템퍼"> <label for="accessory_label1">템퍼</label>
+                <input type="checkbox" id="accessory_label2" value="계량스푼"> <label for="accessory_label2">계량스푼</label>
+                <input type="checkbox" id="accessory_label3" value="넛박스"> <label for="accessory_label3">넛박스</label>
+                <input type="checkbox" id="accessory_label4" value="디스트리뷰터"> <label for="accessory_label4">디스트리뷰터</label>
+            </div>
+        </div>
+
+        <div>
+            <div class="tool_content">
+                가격
+            </div>
+            <div class="tool_checkbox">
+                <input type="checkbox" id="price_label1" value="1만원 ~ 2만원"> <label for="price_label1">1만원 ~ 2만원</label>
+                <input type="checkbox" id="price_label2" value="4만원 ~ 6만원"> <label for="price_label2">4만원 ~ 6만원</label>
+                <input type="checkbox" id="price_label3" value="6만원 ~ 10만원"> <label for="price_label3">6만원 ~ 10만원</label>
+                <input type="checkbox" id="price_label4" value="10만원 ~ 18만원"> <label for="price_label4">10만원 ~ 18만원</label>
+                <input type="checkbox" id="price_label5" value="16만원 ~ 34만원"> <label for="price_label5">16만원 ~ 34만원</label>
+            </div>
+        </div>
+        <div>
+            <div class="tool_content">
+                브랜드
+            </div>
+            <div class="tool_checkbox">
+                <input type="checkbox" id="brand_label1" value="풀만"> <label for="brand_label1">풀만</label>
+                <input type="checkbox" id="brand_label2" value="CBSC"> <label for="brand_label2">CBSC</label>
+                <input type="checkbox" id="brand_label3" value="카페클럽"> <label for="brand_label3">카페클럽</label>
+                <input type="checkbox" id="brand_label4" value="칼딘"> <label for="brand_label4">칼딘</label>
+                <input type="checkbox" id="brand_label5" value="칼리타"> <label for="brand_label5">칼리타</label>
+                <input type="checkbox" id="brand_label6" value="이케아"> <label for="brand_label6">이케아</label>
+                <input type="checkbox" id="brand_label7" value="UNKNOWN"> <label for="brand_label7">UNKNOWN</label>
+                <input type="checkbox" id="brand_label8" value="COVING"> <label for="brand_label8">COVING</label>
+                <input type="checkbox" id="brand_label9" value="빈프로"> <label for="brand_label9">빈프로</label>
+                <input type="checkbox" id="brand_label10" value="빈플랜트"> <label for="brand_label10">빈플랜트</label>
+            </div>
+        </div>
+        <div class="coffee_product_list">
+            <h1>상품 리스트</h1>
+            <div class="product-list" id="productList"></div>
+        </div>
+    </div>
+    <script src="../js/product.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
